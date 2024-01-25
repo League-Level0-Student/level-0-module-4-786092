@@ -27,9 +27,16 @@ public class PiAloud {
     	
     // 4. Print ALL the digits of the Pi String, putting each digit on a new line  (hint: use a loop)
     	for(int i=0; i<pi.length(); i++) {
+    		char input = getInputFromUser();
+    		if(input==pi.charAt(i)) {
+    			System.out.println("Correct");
+    		}
+    		else {
+    			System.out.println("Incorrect");
+    		}
     		System.out.println(pi.charAt(i));
     		if(canPlaySounds) {
-    			Sound.speak(pi.charAt(i));
+    	//		Sound.speak(""+pi.charAt(i));
     		}
     	}
     // 5. Skip this step if your computer cannot play sounds.
